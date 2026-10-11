@@ -2,7 +2,7 @@
 
 **Data science · Mathematical modeling · Statistical inference**
 
-I’m a quantitative researcher with a PhD from Tel Aviv University. I use Python and MATLAB to turn experimental data into measurements, build mathematical models, and estimate parameters and their uncertainty. My work combines mathematical modeling, statistical analysis, applied machine learning and quantitative image analysis.
+I’m a quantitative researcher with a PhD from Tel Aviv University. I use Python and MATLAB to turn data to insights, build mathematical models, and estimate parameters and their uncertainty. My work combines mathematical modeling, statistical analysis, applied machine learning and quantitative image analysis.
 
 These repositories bring together methods I developed through doctoral research, a coauthored publication, and data analysis consultancy.
 
@@ -14,9 +14,27 @@ These repositories bring together methods I developed through doctoral research,
 
 `#MathematicalModeling` `#ParameterEstimation` `#Bootstrap` `#Vectorization` `#ParallelComputing` `#MATLAB`
 
-A MATLAB framework that fits three binding states jointly to estimate shared parameters in a statistical-mechanics model.
+<a href="https://github.com/Eafergan/multi-model-cooperativity-inference">
+  <img src="https://raw.githubusercontent.com/Eafergan/multi-model-cooperativity-inference/main/figures/Fig_1.png" alt="Experimental binding measurements and fitted cooperativity curves" width="400">
+</a>
+
+A MATLAB framework that estimates shared parameters in a statistical-mechanics model by minimizing a combined least-squares loss function across three binding states.
 
 I used vectorized calculations to evaluate parameter combinations and parallel processing for **1,000 bootstrap fits**. Histogram checks guide iterative adjustment of parameter ranges. The analysis estimates binding affinity and cooperativity from the same measurements, with bootstrap distributions describing uncertainty in the fitted parameters.
+
+This repository contains the Figure 1 analysis from [Kuang et al., *PLOS Genetics* (2021)](https://doi.org/10.1371/journal.pgen.1009039), which I coauthored. The related Figure 2 analysis is available in my [exponential decay repository](https://github.com/Eafergan/EMSA-Kuang-et-al).
+
+### [Quantitative image analysis and kinetic modeling](https://github.com/Eafergan/Quantitative-analysis-and-modeling-of-the-Notch-transcriptional-response)
+
+`#ImageAnalysis` `#Regression` `#KineticModeling` `#AppliedMachineLearning` `#DataVisualization` `#Python`
+
+<a href="https://github.com/Eafergan/Quantitative-analysis-and-modeling-of-the-Notch-transcriptional-response">
+  <img src="https://raw.githubusercontent.com/Eafergan/Quantitative-analysis-and-modeling-of-the-Notch-transcriptional-response/main/Measure_RBPJ_hubs/Segmentation.png" alt="Microscopy image alongside segmentation of the cytosol, nuclei, and nuclear hubs" width="400">
+</a>
+
+Python workflows from my doctoral research, connecting microscopy measurements with statistical and kinetic models.
+
+I developed scripts for image processing, fluorescence calibration, regression, and decay and recovery fitting. The analysis quantified subnuclear structures across hundreds of cells from multiple experiments, alongside kinetic modeling of protein lifetimes and recovery dynamics.
 
 ### [Relational analysis of microscopy measurements](https://github.com/Eafergan/AsoPeroxisome)
 
@@ -26,13 +44,6 @@ Python analysis developed for a data analysis consultancy with Dr. Einat Zalckva
 
 I connected cell and object tables using **composite keys and validated many-to-one joins**, then used control measurements to define comparison groups. The workflow combines filtering, group summaries, distribution plots, and nonparametric tests. These SQL-style table operations are implemented in pandas, preserving the relationship between individual objects and their parent cells.
 
-### [Quantitative image analysis and kinetic modeling](https://github.com/Eafergan/Quantitative-analysis-and-modeling-of-the-Notch-transcriptional-response)
-
-`#ImageAnalysis` `#Regression` `#KineticModeling` `#AppliedMachineLearning` `#DataVisualization` `#Python`
-
-Python workflows from my doctoral research, connecting microscopy measurements with statistical and kinetic models.
-
-I developed scripts for image processing, fluorescence calibration, regression, and decay and recovery fitting. Resampling propagates measurement variability through the fits, while diagnostic plots support comparisons across conditions. The analysis quantified subnuclear structures across hundreds of cells from multiple experiments, alongside kinetic modeling of protein lifetimes and recovery dynamics.
 
 ### [Exponential decay modeling and parameter uncertainty](https://github.com/Eafergan/EMSA-Kuang-et-al)
 
@@ -40,9 +51,7 @@ I developed scripts for image processing, fluorescence calibration, regression, 
 
 A related MATLAB analysis that fits repeated time-course measurements with an exponential decay model and a residual plateau.
 
-I normalized experimental repeats, estimated decay rates, and converted parameter confidence bounds into half-life ranges. This provides a kinetic comparison alongside the equilibrium analysis in the joint-fitting repository.
-
-The two MATLAB repositories contain analyses for Figures 1 and 2 of [Kuang et al., *PLOS Genetics* (2021)](https://doi.org/10.1371/journal.pgen.1009039), which I coauthored.
+I normalized experimental repeats, estimated decay rates, and converted parameter confidence intervals into half-life ranges. This provides a kinetic comparison alongside the equilibrium analysis in the joint-fitting repository.
 
 ## Tools and methods
 
